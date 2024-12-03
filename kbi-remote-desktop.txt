@@ -1,0 +1,11 @@
+hhttps://github.com/rustdesk/rustdesk/releases/download/1.3.3/rustdesk-1.3.3-0.x86_64.rpm
+
+cd into the downloaded directory 
+
+sudo dnf install ./rustdesk-1.3.3-0.x86_64.rpm
+ttps://github.com/rustdesk/rustdesk/releases/download/1.3.3/rustdesk-1.3.3-0.x86_64.rpm
+
+cd into the downloaded directory 
+
+sudo dnf install ./rustdesk-1.3.3-0.x86_64.rpm
+
