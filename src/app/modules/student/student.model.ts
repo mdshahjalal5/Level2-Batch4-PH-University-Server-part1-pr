@@ -79,11 +79,7 @@ const localGuradianSchema = new Schema<TLocalGuardian>({
 const studentSchema = new Schema<TStudent, StudentModel>(
   {
     id: { type: String, required: [true, 'ID is required'], unique: true },
-    password: {
-      type: String,
-      required: [true, 'Password is required'],
-      maxlength: [20, 'Password can not be more than 20 characters'],
-    },
+
     name: {
       type: userNameSchema,
       required: [true, 'Name is required'],
@@ -131,14 +127,7 @@ const studentSchema = new Schema<TStudent, StudentModel>(
       required: [true, 'Local guardian information is required'],
     },
     profileImg: { type: String },
-    isActive: {
-      type: String,
-      enum: {
-        values: ['active', 'blocked'],
-        message: '{VALUE} is not a valid status',
-      },
-      default: 'active',
-    },
+
     isDeleted: {
       type: Boolean,
       default: false,

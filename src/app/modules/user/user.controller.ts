@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { createStudentIntoDB } from './user.service';
 
 const createStudent = async (
   req: Request,
@@ -7,7 +8,7 @@ const createStudent = async (
 ) => {
   try {
     const { password, student: studentData } = req.body;
-    const result=await  ;
+    const result = await createStudentIntoDB(password, studentData);
   } catch (error) {
     next(error);
   }
