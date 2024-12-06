@@ -1,18 +1,19 @@
 import { Router } from 'express';
-import { UserRoutes } from '../modules/user/user.route';
 import { StudentRoutes } from '../modules/student/student.route';
+import { UserRoutes } from '../modules/user/user.route';
 
 const router = Router();
-const moduelRoutes = [
+const moduleRoutes = [
   {
     path: '/users',
-    routes: UserRoutes,
+    route: UserRoutes,
   },
   {
-    path: '/student',
-    routes: StudentRoutes,
+    path: '/students',
+    route: StudentRoutes,
   },
 ];
 
-moduelRoutes.forEach((route) => router.use(route.path, route.routes));
+moduleRoutes.forEach((route) => router.use(route.path, route.route));
+// moduelRoutes.forEach((route) => router.use(route.path, route.routes));
 export default router;

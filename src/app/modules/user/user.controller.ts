@@ -21,6 +21,7 @@ const createStudent = async (
     next(error);
   }
 };
+
 export const UserControllers = {
   createStudent,
 };
